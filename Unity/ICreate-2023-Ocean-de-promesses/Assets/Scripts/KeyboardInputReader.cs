@@ -4,20 +4,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(PlayerController))]
+[RequireComponent(typeof(DroneManager))]
 public class KeyboardInputReader : MonoBehaviour
 {
-    private PlayerController _playerController;
-
+    private DroneManager _droneManager;
+    
     private void Awake()
     {
-        _playerController = GetComponent<PlayerController>();
+        _droneManager = GetComponent<DroneManager>();
     }
 
     public void Update()
     {
         Vector2 rawInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         
-        _playerController.MovementInput = Vector2.ClampMagnitude(rawInput, 1);
+        _droneManager.Move(Vector2.ClampMagnitude(rawInput, 1));
+
+        if (Input.GetButtonDown("Fire1"))
+        {
+            _droneManager.Plant();
+        }
     }
 }

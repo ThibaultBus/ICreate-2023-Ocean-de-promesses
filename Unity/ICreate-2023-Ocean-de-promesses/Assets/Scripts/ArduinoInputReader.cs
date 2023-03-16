@@ -15,11 +15,11 @@ public class ArduinoInputReader : MonoBehaviour
 
     [SerializeField] private InputSettings settings;
 
-    private PlayerController _playerController;
-
+    private DroneManager _droneManager;
+    
     private void Awake()
     {
-        _playerController = GetComponent<PlayerController>();
+        _droneManager = GetComponent<DroneManager>();
     }
 
     public void HandleInput(ArduinoIO.DataInput data)
@@ -27,8 +27,8 @@ public class ArduinoInputReader : MonoBehaviour
         Vector2 rawInput = new Vector2(
             data.x * settings.xAxisCoeff,  data.y * settings.yAxisCoeff);
         
-        _playerController.MovementInput = Vector2.ClampMagnitude(rawInput, 1);
+        _droneManager.Move(Vector2.ClampMagnitude(rawInput, 1));
+        
+        // TODO: Handle plant button
     }
-
-    // Start is called before the first frame update
 }
