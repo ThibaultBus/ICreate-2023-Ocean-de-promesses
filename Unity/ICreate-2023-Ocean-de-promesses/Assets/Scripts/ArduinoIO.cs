@@ -37,7 +37,8 @@ public class ArduinoIO : MonoBehaviour
                 int.Parse(inputValues[2]),
                 inputValues[0]
             );
-
+            
+            Debug.Log(data.x + " " + data.y);
             return data;
         }
     }
@@ -104,7 +105,6 @@ public class ArduinoIO : MonoBehaviour
             try
             {
                 string line = _serialPort.ReadLine();
-                Debug.Log("input : " + line);
                 DataInput data = DataInput.Deserialize(line);
                 //Debug.Log(data.x + "\t" + data.y);
                 if (data.type != "input")
