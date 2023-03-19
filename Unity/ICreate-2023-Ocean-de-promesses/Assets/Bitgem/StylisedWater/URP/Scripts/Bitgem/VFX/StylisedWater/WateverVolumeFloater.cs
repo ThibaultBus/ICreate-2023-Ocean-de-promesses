@@ -18,7 +18,7 @@ namespace Bitgem.VFX.StylisedWater
 
         #region MonoBehaviour events
 
-        void Update()
+        void FixedUpdate()
         {
             var instance = WaterVolumeHelper ? WaterVolumeHelper : WaterVolumeHelper.Instance;
             
@@ -26,8 +26,7 @@ namespace Bitgem.VFX.StylisedWater
             {
                 return;
             }
-
-            Debug.Log(instance.GetHeight(transform.position));
+            
             transform.position = new Vector3(transform.position.x, instance.GetHeight(transform.position) ?? transform.position.y, transform.position.z);
         }
 
