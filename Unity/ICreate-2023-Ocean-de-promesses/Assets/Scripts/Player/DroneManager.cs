@@ -1,8 +1,10 @@
 using Player;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.Policy;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(PlayerController))]
 public class DroneManager : MonoBehaviour
@@ -11,6 +13,9 @@ public class DroneManager : MonoBehaviour
     private PlantZoneManager _currentPlantZone = null;
     
     private PlayerController _playerController;
+
+    private float lastInputTime;
+    [SerializeField] private float inputResetCooldown = 8f;
     
     private float _lastPlantTime = 0f;
     
@@ -20,11 +25,33 @@ public class DroneManager : MonoBehaviour
     {
         _playerController = GetComponent<PlayerController>();
     }
-    
+
+    // Reset the game if the player is inactive for too long
+    public void Start()
+    {
+        lastInputTime = 0f;
+    }
+
+
+    public void Update()
+    {
+        Debug.Log(lastInputTime + "    " + Time.deltaTime);
+        lastInputTime += Time.deltaTime;
+        if (lastInputTime > inputResetCooldown)
+        {
+            SceneManager.LoadScene("Menu");
+        }
+    }
+
     /* Actions */
     public void Move(Vector3 movement)
     {
         _playerController.MovementInput = movement;
+        if (movement != Vector3.zero)
+        {
+            lastInputTime = 0f;
+        }
+        Debug.Log("INPUT : " + lastInputTime);
     }
     
     public void Plant()
@@ -32,8 +59,9 @@ public class DroneManager : MonoBehaviour
         if (_currentPlantZone != null && Time.time - _lastPlantTime > plantCooldown)
         {
             _currentPlantZone.Plant();
-            _lastPlantTime = Time.time;
         }
+        
+        lastInputTime = 0f;
     }
 
     /* Zone management */

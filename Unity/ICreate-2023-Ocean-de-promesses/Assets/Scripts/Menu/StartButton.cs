@@ -12,12 +12,13 @@ public class StartButton : MonoBehaviour
         if (data.switchStatus == 1)
         {
             Debug.Log("start button pressed");
-            SceneManager.LoadScene("SampleScene");
+            StartGame();
         }
     }
     
     public void StartGame()
     {
+        Debug.Log("start game");
         SceneManager.LoadScene("SampleScene");
     }
 }
