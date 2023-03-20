@@ -12,6 +12,10 @@ public class DroneManager : MonoBehaviour
     
     private PlayerController _playerController;
     
+    private float _lastPlantTime = 0f;
+    
+    [SerializeField] private float plantCooldown = 1f;
+    
     private void Awake()
     {
         _playerController = GetComponent<PlayerController>();
@@ -25,9 +29,10 @@ public class DroneManager : MonoBehaviour
     
     public void Plant()
     {
-        if (_currentPlantZone != null)
+        if (_currentPlantZone != null && Time.time - _lastPlantTime > plantCooldown)
         {
             _currentPlantZone.Plant();
+            _lastPlantTime = Time.time;
         }
     }
 

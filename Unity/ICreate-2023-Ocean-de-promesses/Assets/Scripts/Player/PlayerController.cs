@@ -24,7 +24,7 @@ namespace Player
         public float maxDeceleration = 40f;
         [SerializeField, Range(0f, 100f)]
         public float turnAcceleration = 50f;
-    
+
         private void Awake()
         {
             _rb = GetComponent<Rigidbody>();
