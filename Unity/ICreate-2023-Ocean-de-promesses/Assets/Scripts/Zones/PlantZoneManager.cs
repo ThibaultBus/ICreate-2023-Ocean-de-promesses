@@ -5,7 +5,9 @@ using UnityEngine;
 public class PlantZoneManager : MonoBehaviour
 {
     private MeshRenderer _meshRenderer;
+    [SerializeField] private ParticleSystem _particleSystem;
     [SerializeField] private GameObject _plant;
+    private bool _planted = false;
     private void Awake()
     {
         _meshRenderer = GetComponent<MeshRenderer>();
@@ -32,6 +34,10 @@ public class PlantZoneManager : MonoBehaviour
     
     public void Plant()
     {
+        if (_planted)
+            return;
+        
+        _planted = true;
         if (_meshRenderer) 
             _meshRenderer.material.color = new Color(0f, 1f, 0f, 0.3f);
         
@@ -39,5 +45,6 @@ public class PlantZoneManager : MonoBehaviour
         Vector3 plantPosition = transform.position;
         plantPosition.y = 0f;
         _plant = Instantiate(_plant, plantPosition, Quaternion.identity);
+        _particleSystem.Play();
     }
 }
