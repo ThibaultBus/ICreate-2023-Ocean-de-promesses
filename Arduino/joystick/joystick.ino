@@ -1,7 +1,7 @@
-#define joyDown 7
-#define joyUp 2
-#define joyLeft 8
-#define joyRight 4
+#define joyDown 4
+#define joyUp 8
+#define joyLeft 7
+#define joyRight 2
 
 #define switchPin 12
 
