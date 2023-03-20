@@ -8,7 +8,6 @@ namespace Player
     public class PlayerController : MonoBehaviour
     {
         private Rigidbody _rb;
-        public Rigidbody radar;
 
         [field: HideInInspector] public Vector3 MovementInput { get; set; }
 
@@ -25,11 +24,12 @@ namespace Player
         public float maxDeceleration = 40f;
         [SerializeField, Range(0f, 100f)]
         public float turnAcceleration = 50f;
+        [SerializeField, Range(0f, 100f)]
+        public float rotationSpeed = 10f;
 
         private void Awake()
         {
             _rb = GetComponent<Rigidbody>();
-            radar.position = _rb.position;
         }
     
         private float GetAcceleration(float previousVelocity, float desiredVelocity)
@@ -66,12 +66,14 @@ namespace Player
             );
         
             _rb.velocity = newVelocity;
-            radar.velocity = newVelocity;
 
             LookDirection = MovementInput;
-            
+
             if (LookDirection != Vector3.zero)
-                transform.LookAt(transform.position + LookDirection);
+            {
+                Quaternion targetRotation = Quaternion.LookRotation(LookDirection);
+                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+            }
         }
     }
 }
