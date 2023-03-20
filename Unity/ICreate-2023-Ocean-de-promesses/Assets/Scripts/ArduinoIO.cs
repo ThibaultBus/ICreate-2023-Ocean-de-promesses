@@ -82,8 +82,6 @@ public class ArduinoIO : MonoBehaviour
             _instance = this;
         }
         
-        DontDestroyOnLoad(this.gameObject);
-        
         _serialPort = new SerialPort(portName, baudrate);
         
         try {

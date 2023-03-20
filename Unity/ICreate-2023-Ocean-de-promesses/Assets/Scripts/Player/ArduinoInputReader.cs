@@ -29,7 +29,6 @@ public class ArduinoInputReader : MonoBehaviour
 
         _droneManager.Move(Vector3.ClampMagnitude(rawInput, 1));
         
-        // TODO: Handle plant button
         if (data.switchStatus == 1)
         {
             _droneManager.Plant();
