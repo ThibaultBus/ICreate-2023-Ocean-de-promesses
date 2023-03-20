@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8502887685240693472}
   - component: {fileID: 8502887685240693473}
   - component: {fileID: 8502887685240693469}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Zone
   m_TagString: Zone
   m_Icon: {fileID: 0}

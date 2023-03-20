@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 1117599747254400942}
   - component: {fileID: 1117599747254400941}
   - component: {fileID: 1117599747254400929}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlantZone
-  m_TagString: Zone
+  m_TagString: PlantZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

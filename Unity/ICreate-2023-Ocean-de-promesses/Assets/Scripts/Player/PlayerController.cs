@@ -8,6 +8,7 @@ namespace Player
     public class PlayerController : MonoBehaviour
     {
         private Rigidbody _rb;
+        public Rigidbody radar;
 
         [field: HideInInspector] public Vector3 MovementInput { get; set; }
 
@@ -28,6 +29,7 @@ namespace Player
         private void Awake()
         {
             _rb = GetComponent<Rigidbody>();
+            radar.position = _rb.position;
         }
     
         private float GetAcceleration(float previousVelocity, float desiredVelocity)
@@ -64,6 +66,7 @@ namespace Player
             );
         
             _rb.velocity = newVelocity;
+            radar.velocity = newVelocity;
 
             LookDirection = MovementInput;
             
