@@ -21,12 +21,14 @@ public class ArduinoIO : MonoBehaviour
         /* Input */
         public int x;
         public int y;
+        public int switchStatus;
 
-        public DataInput(int x, int y, string type = "input")
+        public DataInput(int x, int y, int switchStatus, string type = "input")
         {
             this.type = type;
             this.x = x;
             this.y = y;
+            this.switchStatus = switchStatus;
         }
         public static DataInput Deserialize(string input)
         {
@@ -35,9 +37,11 @@ public class ArduinoIO : MonoBehaviour
             (
                 int.Parse(inputValues[1]),
                 int.Parse(inputValues[2]),
+                int.Parse(inputValues[3]),
                 inputValues[0]
             );
-
+            
+            Debug.Log(data.x + " " + data.y + " " + data.switchStatus);
             return data;
         }
     }
@@ -104,7 +108,6 @@ public class ArduinoIO : MonoBehaviour
             try
             {
                 string line = _serialPort.ReadLine();
-                Debug.Log("input : " + line);
                 DataInput data = DataInput.Deserialize(line);
                 //Debug.Log(data.x + "\t" + data.y);
                 if (data.type != "input")
