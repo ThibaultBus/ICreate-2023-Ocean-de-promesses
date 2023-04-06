@@ -1,3 +1,3 @@
 # Un océan de promesse
 
-![](public/FinaImageICreate.png)
+![](public/FinaImageICreate.jpg)
