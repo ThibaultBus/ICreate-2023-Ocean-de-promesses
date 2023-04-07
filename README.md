@@ -33,6 +33,7 @@ As for the movement of the fish, We implemented a simple movement trajectory whe
 
 ##### Possible future work: 
 
-1- Adding more complex and artistic movement to the fish such as jumping from water
-2- We also developped an underwater view with a terrain that we worked on using blender (can be found in public/Cool-Surface in the github repository), where the user could get a more immersive experience in discovering the underwater life of algae and fish.
+1. Adding more complex and artistic movement to the fish such as jumping from water
+
+2. We also developped an underwater view with a terrain that we worked on using blender (can be found in public/Cool-Surface in the github repository), where the user could get a more immersive experience in discovering the underwater life of algae and fish.
 
