@@ -14,7 +14,7 @@
 
 ##### Designers from l’École de Design Nantes Atlantique
 
-t Cheick Habib
+- Cheick Habib
 
 - Léa Seill
 
