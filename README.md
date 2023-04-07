@@ -2,6 +2,27 @@
 
 ![](public/FinaImageICreate.jpg)
 
+### The team
+
+##### Engineers from Polytech Nantes
+
+Alexandre Bocquier
+Bilal Zaraket
+Thibault Bustarret
+
+##### Designers from l’École de Design Nantes Atlantique
+
+Cheick Habib
+Léa Seill
+Léa Garos
+Manon Brisson
+Clémence Janlin
+Gianmaria Corsi
+
+### The project
+
+Our 
+
 This project is an installation with the aim of presenting **K'Help**, a robot capable of sowing kelp to help recover biodiversity in areas deteriorated by human activity, to increase the capacity of absorption of CO₂ of the oceans and to contribute to their deacidification. More information on the benefits of kelp on the [Kelp Forest Alliance's website](https://kelpforestalliance.com/).
 
 This project requires two screens and a computer with Unity **2021.3.19f1** installed.
