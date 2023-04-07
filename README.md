@@ -6,22 +6,29 @@
 
 ##### Engineers from Polytech Nantes
 
-Alexandre Bocquier
-Bilal Zaraket
-Thibault Bustarret
+- Alexandre Bocquier
+
+- Bilal Zaraket
+
+- Thibault Bustarret
 
 ##### Designers from l’École de Design Nantes Atlantique
 
-Cheick Habib
-Léa Seill
-Léa Garos
-Manon Brisson
-Clémence Janlin
-Gianmaria Corsi
+t Cheick Habib
+
+- Léa Seill
+
+- Léa Garos
+
+- Manon Brisson
+
+- Clémence Janlin
+
+- Gianmaria Corsi
 
 ### The project
 
-Our 
+Our theme is "Océan de promesses", which translates as "Ocean of promises". It evokes the idea of a vast and hopeful realm with many opportunities and possibilities to explore. It can be used to describe topics such as ecological, economic or societal opportunities, travel and discovery, as well as the challenges and opportunities brought by the ocean in general.
 
 This project is an installation with the aim of presenting **K'Help**, a robot capable of sowing kelp to help recover biodiversity in areas deteriorated by human activity, to increase the capacity of absorption of CO₂ of the oceans and to contribute to their deacidification. More information on the benefits of kelp on the [Kelp Forest Alliance's website](https://kelpforestalliance.com/).
 
