@@ -1,3 +1,6 @@
+/*
+  This is a demo that enable movement with a bidirectional proportional output joystick. It's shouldn't be used as is, because it does not have any switch support
+*/
 #define pinX A2
 #define pinY A1
 #define ledPin LED_BUILTIN
