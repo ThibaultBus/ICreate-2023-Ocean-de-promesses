@@ -15,13 +15,19 @@
 ### Poissons
 
 For the part related to fish generation and their movement, we used the animatedfish packet created by Quaternius (see credits.txt) which contains the following fish assets:
--Dolphin
--Fish1
--Fish2
--Fish3
--Shark 
--Whale
--Manta Ray
+- Dolphin
+
+- Fish1
+
+- Fish2
+
+- Fish3
+
+- Shark 
+
+- Whale
+
+- Manta Ray
 
 These assets could be found inside **Assets/fish** folder
 
