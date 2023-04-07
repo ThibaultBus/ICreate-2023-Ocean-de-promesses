@@ -28,13 +28,13 @@ Open the Menu scene and run the game from there (or build the project for your d
 
 ### Terrain
 
-The terrain was made with [Unity's Terrain Tools](https://docs.unity3d.com/Packages/com.unity.terrain-tools@2.0/manual/getting-started-with-terrain-tools.html) and [Unity's Terrain Sample Asset](https://assetstore.unity.com/packages/3d/environments/landscapes/terrain-sample-asset-pack-145808)
+The terrain was made with [Unity's Terrain Tools](https://docs.unity3d.com/Packages/com.unity.terrain-tools@2.0/manual/getting-started-with-terrain-tools.html) and [Unity's Terrain Sample Asset](https://assetstore.unity.com/packages/3d/environments/landscapes/terrain-sample-asset-pack-145808).
 
 ### Movement
 
 The movement was built upon the `PlayerController` script from a previous project by Thibault Bustarret.
 
-### Poissons
+### Fish
 
 For the part related to fish generation and their movement, we used the animatedfish packet created by Quaternius (see credits.txt) which contains the following fish assets:
 - Dolphin
